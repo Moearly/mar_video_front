@@ -48,7 +48,7 @@
   },
   "scripts": {
     "prestart": "bower install",
-    "start": "npm install",
+    "start": "cnpm install",
     "poststart": "gulp"
   }
 }

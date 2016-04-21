@@ -1,10 +1,10 @@
 {
-  "name": "Angle",
+  "name": "mar_video_front",
   "version": "0.0.0",
   "authors": [
-    "@themicon_co"
+    "martnlei@163.com"
   ],
-  "description": "Angle - Bootstrap Admin App + AngularJS",
+  "description": "video site power by angularjs",
   "main": "index.html",
   "keywords": [
     "bootstrap",
@@ -12,12 +12,6 @@
     "admin",
     "theme",
     "dashboard"
-  ],
-  "license": "http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses",
-  "homepage": "http://themicon.co",
-  "private": true,
-  "ignore": [
-    "**/.*"
   ],
   "dependencies": {
     "angular-loading-bar": "0.8.0",
