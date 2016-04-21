@@ -1,15 +1,18 @@
 var args = require('yargs').argv,
     path = require('path'),
     gulp = require('gulp'),
-    $ = require('gulp-load-plugins')(),
-    gulpsync = $.sync(gulp),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
-    PluginError = $.util.PluginError,
     del = require('del'),
-    karmaServer = require('karma').Server,
+
+    $ = require('gulp-load-plugins')(),
+    gulpsync = $.sync(gulp),
+    PluginError = $.util.PluginError,
+
     protractor = $.protractor.protractor,
     webdriver = $.protractor.webdriver,
+
+    karmaServer = require('karma').Server,
     express = require('express');
 
 // production mode (see build task)
@@ -20,7 +23,8 @@ var useSourceMaps = false;
 // Switch to sass mode.
 // Example:
 //    gulp --usesass
-var useSass = args.usesass;
+//var useSass = args.usesass;
+var useSass = true;
 
 // Angular template cache
 // Example:
@@ -33,7 +37,7 @@ var ignored_files = '!' + hidden_files;
 
 // MAIN PATHS
 var paths = {
-    app: '../app/',
+    app: '../app/',//编译后文件存放的目录
     markup: 'jade/',
     styles: 'less/',
     scripts: 'js/'
@@ -42,7 +46,7 @@ var paths = {
 // if sass -> switch to sass folder
 if (useSass) {
     log('Using SASS stylesheets...');
-    paths.styles = 'sass/';
+    paths.styles = 'sass/'; //使用sass作为样式
 }
 
 
