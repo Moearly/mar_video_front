@@ -76,9 +76,9 @@ var source = {
         paths.scripts + 'custom/**/*.module.js',
         paths.scripts + 'custom/**/*.js'
     ],
-    templates: {
+    templates: {//jade模板目录
         index: [paths.markup + 'index.*'],
-        views: [paths.markup + '**/*.*', '!' + paths.markup + 'index.*']
+        views: [paths.markup + '**/*.*', '!' + paths.markup + 'index.*']//除了index以外的其他的
     },
     styles: {
         app: [paths.styles + '*.*'],
@@ -94,11 +94,11 @@ var build = {
     templates: {
         index: '../',
         views: paths.app,
-        cache: paths.app + 'js/' + 'templates.js',
+        cache: paths.app + 'js/' + 'templates.js'
     }
 };
 
-// PLUGINS OPTIONS
+// PLUGINS OPTIONS----插件配置
 
 var prettifyOpts = {
     indent_char: ' ',
@@ -424,7 +424,7 @@ gulp.task('usesources', function() {
     useSourceMaps = true;
 });
 
-// default (no minify)
+// default (no minify)---默认的task
 gulp.task('default', gulpsync.sync([
     'vendor',
     'assets',
